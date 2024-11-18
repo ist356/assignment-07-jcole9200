@@ -30,7 +30,7 @@ def clean_scraped_text(scraped_text: str) -> list[str]:
 def extract_menu_item(title:str, scraped_text: str) -> MenuItem:
     cleaned_items = clean_scraped_text(scraped_text)
     item = item = MenuItem(category= title, name= "", price= 0.0, description= "")
-    item.name - cleaned_items[0]
+    item.name = cleaned_items[0]
     item.price = clean_price(cleaned_items[1])
     if len(cleaned_items) > 2:
         item.description = cleaned_items[2]
@@ -73,6 +73,7 @@ $6.99
 '''
 
     ]
+    title = "TEST"
     for scraped_text in test_items:
         item = extract_menu_item(title, scraped_text)
         print(item)

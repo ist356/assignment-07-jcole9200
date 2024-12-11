@@ -1,7 +1,7 @@
 # Reflection
 
-Student Name:  name
-Sudent Email:  email
+Student Name: jamie cole
+Sudent Email: jcole05@syr.edu
 
 ## Instructions
 
@@ -23,3 +23,4 @@ Examples:
 
 `--- Reflection Below This Line ---`
 
+Through this assignment, I deepened my understanding of using Playwright for web scraping and integrating it with Python tools like Pandas for data handling. I learned how to navigate the with selectors and efficiently extract nested data while cleaning and parsing it for analysis. However, I struggled with handling dynamic selectors and inconsistencies in the scraped text, which required debugging and refining my query logic. This experience highlighted the importance of error handling, such as implementing fallback strategies for missing elements or unexpected data structures. Moving forward, I want to practice handling advanced scenarios like pagination and dynamically generated content to make my scraping scripts more reliable and adaptable.

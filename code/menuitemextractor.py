@@ -1,5 +1,3 @@
-
-
 if __name__ == "__main__":
     import sys
     sys.path.append('code')
@@ -13,7 +11,6 @@ def clean_price(price:str) -> float:
     price = price.replace(",", "")
     return float(price)
 
-
 def clean_scraped_text(scraped_text: str) -> list[str]:
     items = scraped_text.split("\n")
     cleaned = []
@@ -24,18 +21,21 @@ def clean_scraped_text(scraped_text: str) -> list[str]:
             continue
         if len(item.strip()) == 0:
             continue
+
         cleaned.append(item)
+
     return cleaned
+
 
 def extract_menu_item(title:str, scraped_text: str) -> MenuItem:
     cleaned_items = clean_scraped_text(scraped_text)
-    item = item = MenuItem(category= title, name= "", price= 0.0, description= "")
+    item = MenuItem(category=title, name="", price=0.0, description="")
     item.name = cleaned_items[0]
     item.price = clean_price(cleaned_items[1])
     if len(cleaned_items) > 2:
         item.description = cleaned_items[2]
     else:
-        item.description = "no description available"
+        item.description = "No description available."
     return item
 
 

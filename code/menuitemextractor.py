@@ -7,9 +7,13 @@ else:
 
 
 def clean_price(price:str) -> float:
+    # remove dollar sign
     price = price.replace("$", "")
+    # remove any commas
     price = price.replace(",", "")
+    # convert to float
     return float(price)
+
 
 def clean_scraped_text(scraped_text: str) -> list[str]:
     items = scraped_text.split("\n")
